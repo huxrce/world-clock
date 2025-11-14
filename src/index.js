@@ -9,14 +9,26 @@ function updateTime() {
     romeTimeElement.innerHTML = romeTime.format("h:mm:ss [<small>]A[</small>]");
   }
 
-  let seoulElement = document.querySelector("#seoul");
-  if (seoulElement) {
-    let seoulDateElement = seoulElement.querySelector(".date");
-    let seoulTimeElement = seoulElement.querySelector(".time");
-    let seoulTime = moment().tz("Asia/Seoul");
+  let shanghaiElement = document.querySelector("#shanghai");
+  if (shanghaiElement) {
+    let shanghaiDateElement = shanghaiElement.querySelector(".date");
+    let shanghaiTimeElement = shanghaiElement.querySelector(".time");
+    let shanghaiTime = moment().tz("Asia/Shanghai");
 
-    seoulDateElement.innerHTML = seoulTime.format("MMMM Do YYYY");
-    seoulTimeElement.innerHTML = seoulTime.format(
+    shanghaiDateElement.innerHTML = shanghaiTime.format("MMMM Do YYYY");
+    shanghaiTimeElement.innerHTML = shanghaiTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  let hawaiiElement = document.querySelector("#hawaii");
+  if (hawaiiElement) {
+    let hawaiiDateElement = hawaiiElement.querySelector(".date");
+    let hawaiiTimeElement = hawaiiElement.querySelector(".time");
+    let hawaiiTime = moment().tz("US/Hawaii");
+
+    hawaiiDateElement.innerHTML = hawaiiTime.format("MMMM Do YYYY");
+    hawaiiTimeElement.innerHTML = hawaiiTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
@@ -40,6 +52,7 @@ function updateCity(event) {
         ${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small>
       </div>
     </div>
+    <button onclick="location.href='index.html'">Homepage</button>
   `;
 
   setTimeout(function () {

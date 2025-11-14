@@ -59,6 +59,23 @@ h2 {
   vertical-align: middle;
 }
 
+button {
+  background: #800080;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  display: block;
+  font-size: 16px;
+  margin: 24px auto 0;
+  padding: 10px 15px;
+  transition: all 100ms ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  filter: opacity(85%);
+}
+
 footer {
   color: rgba(0, 0, 0, 0.8);
   font-size: 17px;
